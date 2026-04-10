@@ -1,0 +1,63 @@
+# ===============================
+# Logging / Output
+# ===============================
+log_name: "exp/tvl_clip"
+use_wandb: true
+
+# ===============================
+# Training parameters
+# ===============================
+batch_size: 16
+epochs: 1000
+warmup_epochs: 100
+multi_epochs_dataloader: true
+find_unused_parameters: true
+
+# ===============================
+# Loss parameters
+# ===============================
+use_aggregation_loss: false
+
+# ===============================
+# Optimizer / LR parameters
+# ===============================
+weight_decay: 0.05
+blr: 1e-4              # base lr (absolute lr = blr * total_batch / 256)
+
+# ===============================
+# Dataset parameters
+# ===============================
+datasets_dir: "/path/to/SeeingThroughTouch/datasets" # Update this path to your local SeeingThroughTouch datasets directory
+datasets: ["touch_and_go"]
+active_modality_names: ["vision", "tactile"]
+test_split_type: "no_inter"
+dataset_rectangular_padding: true
+TouchInstance_file: "/path/to/SeeingThroughTouch/datasets/touch_and_go/metadata/train_nointer_touch_instances.txt" # Update this path to your local TouchInstance file
+
+# ===============================
+# Vision encoder parameters
+# ===============================
+vision_pretrained_weight: "clip"
+vision_projection_type: "none"
+
+# ===============================
+# Tactile encoder parameters
+# ===============================
+tactile_pretrained_weight: "random"
+tactile_model: "vit_tiny_patch16_224"
+tactile_dino_finetuning_trainable_layers: [0,1,2,3,4,5,6,7,8,9,10,11]
+tactile_projection_type: "none"
+tactile_train_patch_embed: "full"
+
+# ===============================
+# Projection / Embedding
+# ===============================
+projection_lr_ratio: 1.0
+target_embedding_dim: 384
+forward_option: "cls_token"
+
+# ===============================
+# Runtime / Misc
+# ===============================
+num_workers: 16
+seed: 30

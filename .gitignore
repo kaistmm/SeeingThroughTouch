@@ -1,0 +1,27 @@
+# Experiment logs
+wandb/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Intermediate data
+dataset_refine/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+.vscode/
+checkpoints/
+toy.ipynb
+
+datasets/touch_and_go/dataset_224
+datasets/touch_and_go/mask
+
+datasets/WebMaterial_dataset
+
+datasets/OpenSurfaces/mask
+
+Original_code/
+output_dir/

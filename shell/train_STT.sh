@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0,1,2,3 OMP_NUM_THREADS=1 torchrun --nproc_per_node=4 --master_port 29657 main_pretrain.py  --config /home/seon/workspace/tactile/SeeingThroughTouch/config/STT.yaml

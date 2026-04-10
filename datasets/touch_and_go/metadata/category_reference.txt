@@ -1,0 +1,21 @@
+Inconclusive: -1 (Do not use it for material classification)
+Concrete: 0
+Plastic: 1
+Glass: 2
+Wood: 3 
+Metal:4
+Brick: 5
+Tile: 6
+Leather:7
+Synthetic Fabric: 8
+Natural Fabric: 9
+Ruber: 10
+Paper: 11
+Tree: 12
+Grass: 13
+Soil: 14
+Rock: 15
+Gravel: 16
+Sand: 17
+Plants: 18
+Others: 19

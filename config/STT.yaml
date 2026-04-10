@@ -1,0 +1,81 @@
+# ===============================
+# Logging / Output
+# ===============================
+log_name: "exp/STT"
+use_wandb: true
+
+# ===============================
+# Training parameters
+# ===============================
+batch_size: 16
+epochs: 200
+warmup_epochs: 1
+multi_epochs_dataloader: true
+find_unused_parameters: true
+
+# ===============================
+# Aligner Warmup
+# ===============================
+enable_projection_warmup: true
+projection_warmup_epochs: 3
+warmup_modalities: ["vision", "tactile"]
+
+# ===============================
+# Optimizer / LR parameters
+# ===============================
+weight_decay: 0.05
+blr: 1e-5          # base lr (absolute lr = blr * total_batch / 256)
+
+# ===============================
+# Dataset parameters
+# ===============================
+datasets_dir: "/path/to/SeeingThroughTouch/datasets" # Update this path to your local SeeingThroughTouch datasets directory
+datasets: ["touch_and_go"]
+active_modality_names: ["vision", "tactile"]
+test_split_type: "no_inter"
+dataset_rectangular_padding: false
+curriculum_epoch: 100
+
+# Touch Instance + MDP settings
+TouchInstance_file: "/path/to/SeeingThroughTouch/datasets/touch_and_go/metadata/train_nointer_touch_instances.txt" # Update this path to your local TouchInstance file
+MDP_mode: "Out-domain"  # Options: null, "In-domain", "Out-domain"
+WebMaterial_file: "/path/to/SeeingThroughTouch/datasets/WebMaterial_dataset/metadata/train_metadata.txt" # Update this path to your local WebMaterial metadata file
+WebMaterial_base_dir: "/path/to/SeeingThroughTouch/datasets/WebMaterial_dataset/train/image" # Update this path to your local WebMaterial image directory
+
+# ===============================
+# Vision encoder parameters
+# ===============================
+vision_pretrained_weight: "dino"
+vision_dino_version: "v3"
+vision_dino_model: "dinov3_vits16"
+vision_projection_type: "aligner"
+vision_use_self_attention: false
+vision_use_attention_pooling: false
+
+# ===============================
+# Tactile encoder parameters
+# ===============================
+tactile_pretrained_weight: "dino"
+tactile_dino_version: "v3"
+tactile_dino_model: "dinov3_vits16"
+tactile_dino_finetuning_trainable_layers: [0,1,2,3,4,5,6,7,8,9,10,11]
+tactile_projection_type: "aligner"
+tactile_train_patch_embed: "full"
+tactile_use_self_attention: false
+tactile_use_attention_pooling: false
+
+# ===============================
+# Projection / Embedding
+# ===============================
+projection_lr_ratio: 1.0
+target_embedding_dim: 384
+forward_option: "average_pooling"
+aggregation_pool: "max"
+use_aggregation_loss: true
+
+# ===============================
+# Runtime / Misc
+# ===============================
+num_workers: 16
+dinov3_repo_local: "/path/to/dinov3" # Update this path to your local DINOv3 repository
+seed: 30
