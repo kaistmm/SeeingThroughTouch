@@ -4,7 +4,8 @@ The official Pytorch implementation for "Seeing Through Touch: Tactile-Driven Vi
 
 <p align="center">
   <a href="https://mm.kaist.ac.kr/projects/SeeingThroughTouch/"><img src="https://img.shields.io/badge/STT-Project_Page-blue" alt="Project Page"></a>&nbsp;
-  <a href="https://arxiv.org/abs/2604.11579"><img src="https://img.shields.io/badge/arXiv-2604.11579-b31b1b.svg" alt="arXiv"></a>
+  <a href="https://arxiv.org/abs/2604.11579"><img src="https://img.shields.io/badge/arXiv-2604.11579-b31b1b.svg" alt="arXiv"></a>&nbsp;
+  <a href="https://huggingface.co/seongyu/SeeingThroughTouch/tree/main"><img src="https://img.shields.io/badge/Dataset-HuggingFace-yellow" alt="Dataset"></a>
 </p>
 <p align="center">
   <img src="assets/demo.gif" alt="Demo" width="800"/>
