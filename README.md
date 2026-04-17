@@ -1,6 +1,6 @@
 # Seeing Through Touch: <br> Tactile-Driven Visual Localization of Material Regions
 The official Pytorch implementation for "Seeing Through Touch: Tactile-Driven Visual Localization of Material Regions", CVPR 2026 
-<br> [Seongyu Kim](https://sites.google.com/view/seongyukim/), [Seungwoo Lee](https://mm.kaist.ac.kr/members/), [Hyeonggon Ryu](https://sites.google.com/view/mmmi-hufs/members/pi?authuser=0), [Joon Son Chung](https://mm.kaist.ac.kr/joon/), [Arda Senocak](https://ardasnck.github.io/)
+<br> [Seongyu Kim](https://seongyukim.github.io/), [Seungwoo Lee](https://mm.kaist.ac.kr/members/), [Hyeonggon Ryu](https://sites.google.com/view/mmmi-hufs/members/pi?authuser=0), [Joon Son Chung](https://mm.kaist.ac.kr/joon/), [Arda Senocak](https://ardasnck.github.io/)
 
 <p align="center">
   <a href="https://mm.kaist.ac.kr/projects/SeeingThroughTouch/"><img src="https://img.shields.io/badge/STT-Project_Page-blue" alt="Project Page"></a>&nbsp;
